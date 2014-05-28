@@ -1,4 +1,4 @@
 IMColorPicker
 =============
 
-A elegance color picker view for Mac
+An elegance color picker view for Mac
