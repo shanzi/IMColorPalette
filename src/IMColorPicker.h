@@ -13,7 +13,10 @@
 @property(nonatomic, readonly) NSColor *color;
 @property(nonatomic, readonly) NSColor *mouseOverColor;
 @property(nonatomic) NSArray *colors;
-
 @property(nonatomic) CGFloat pickerSize;
+@property(nonatomic) NSInteger selectedIndex;
+
+- (void)removeSelectedColor;
+- (IBAction)delete:(id)sender;
 
 @end

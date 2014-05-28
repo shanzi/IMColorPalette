@@ -18,7 +18,6 @@ typedef enum{
 {
   SEL _action;
   id _target;
-  NSInteger _selectedIndex;
   NSInteger _mouseOverIndex;
   NSMutableArray *_colors;
   NSCursor *_newPickerCursor;
@@ -33,6 +32,7 @@ typedef enum{
 {
     self = [super initWithFrame:frame];
     if (self) {
+      _selectedIndex = -1;
       _colors = [[NSMutableArray alloc] init];
       _mouseOverIndex = -1;
       _pickerSize = 24;
@@ -46,18 +46,23 @@ typedef enum{
   return YES;
 }
 
+- (BOOL)acceptsFirstResponder
+{
+  return YES;
+}
+
 - (void)viewDidMoveToSuperview
 {
   [super viewDidMoveToSuperview];
   NSInteger options = (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved
-                       | NSTrackingActiveInKeyWindow | NSTrackingInVisibleRect);
+                       | NSTrackingActiveInKeyWindow| NSTrackingInVisibleRect);
   NSTrackingArea *area =
   [[NSTrackingArea alloc] initWithRect:[self bounds]
                                options:options
                                  owner:self
                               userInfo:nil];
   [self addTrackingArea:area];
-  
+  [[self window] makeFirstResponder:self];
 }
 
 - (void)setColors:(NSArray *)colors
@@ -69,6 +74,34 @@ typedef enum{
 - (NSArray *)colors
 {
   return _colors;
+}
+
+- (void)removeSelectedColor
+{
+  if (_selectedIndex>=0 && _selectedIndex<[_colors count]) {
+    [self willChangeValueForKey:@"color"];
+    [_colors removeObjectAtIndex:_selectedIndex];
+    if (_selectedIndex>=[_colors count]) _selectedIndex = [_colors count] - 1;
+    [self didChangeValueForKey:@"color"];
+    [self setNeedsDisplay];
+  }
+}
+
+- (void)setSelectedIndex:(NSInteger)selectedIndex
+{
+  if (selectedIndex<0) selectedIndex = 0;
+  else if (selectedIndex >= [_colors count]) selectedIndex=[_colors count]-1;
+  NSInteger oldIndex = _selectedIndex;
+  
+  [self willChangeValueForKey:@"color"];
+  _selectedIndex = selectedIndex;
+  [self didChangeValueForKey:@"color"];
+  
+  if (_selectedIndex != oldIndex) {
+    [self setNeedsDisplayInRect:[self rectForIndex:oldIndex]];
+    [self setNeedsDisplayInRect:[self rectForIndex:_selectedIndex]];
+    [self sendAction:_action to:_target];
+  }
 }
 
 #pragma mark - Drawing
@@ -198,7 +231,7 @@ typedef enum{
     [self setNeedsDisplayInRect:[self rectForIndex:_mouseOverIndex]];
   }
   
-  if ([self indexForLocation:location]>=[_colors count]) {
+  if ([self indexForLocation:location]>=[_colors count] && NSPointInRect(location, self.visibleRect)) {
     if ([NSCursor currentCursor]!=_newPickerCursor) {
       [_newPickerCursor push];
     }
@@ -224,22 +257,33 @@ typedef enum{
   NSPoint location = [theEvent locationInWindow];
   location = [self convertPoint:location fromView:nil];
   
-  NSInteger oldIndex = _selectedIndex;
-  _selectedIndex = [self indexForLocation:location];
-  if (_selectedIndex >= [_colors count]) {
+  NSInteger index = [self indexForLocation:location];
+  if (index >= [_colors count]) {
     [_colors addObject:[NSColor whiteColor]];
-    _selectedIndex = [_colors count]-1;
+    self.selectedIndex = [_colors count]-1;
     [self showColorPanel];
   }
   else if ([theEvent clickCount]>1) {
     [self showColorPanel];
   }
-  
-  [self setNeedsDisplayInRect:[self rectForIndex:oldIndex]];
-  if (_selectedIndex != oldIndex) {
-    [self setNeedsDisplayInRect:[self rectForIndex:_selectedIndex]];
+  self.selectedIndex = index;
+  [[self window] makeFirstResponder:self];
+}
+
+- (void)keyDown:(NSEvent *)theEvent
+{
+  if ([theEvent keyCode]==51) {
+    [self removeSelectedColor];
   }
-  
+  else if ([theEvent keyCode]==48 || ([theEvent keyCode]==3 && ([theEvent modifierFlags] & NSControlKeyMask))) {
+    // Tab/ C-F
+    self.selectedIndex += 1;
+  }
+  else if ([theEvent keyCode]==11 && ([theEvent modifierFlags] & NSControlKeyMask)) {
+    // C-B
+    self.selectedIndex -= 1;
+  }
+  else [super keyDown:theEvent];
 }
 
 
@@ -265,7 +309,12 @@ typedef enum{
   _target = anObject;
 }
 
-#pragma mask - Color panel
+- (void)delete:(id)sender
+{
+  [self removeSelectedColor];
+}
+
+#pragma mark - Color panel
 - (void)showColorPanel
 {
   if (_colorPanel==nil) {
@@ -281,10 +330,11 @@ typedef enum{
   if (_selectedIndex>=0) {
     [_colors setObject:_colorPanel.color atIndexedSubscript:_selectedIndex];
     [self setNeedsDisplayInRect:[self rectForIndex:_selectedIndex]];
+    [self sendAction:_action to:_target];
   }
 }
 
-#pragma mask - properties
+#pragma mark - properties
 
 - (NSColor *)color
 {
