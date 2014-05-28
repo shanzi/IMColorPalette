@@ -1,0 +1,305 @@
+//
+//  IMColorPicker.m
+//  IMColorPickerDemo
+//
+//  Created by Chase Zhang on 5/28/14.
+//  Copyright (c) 2014 io-meter. All rights reserved.
+//
+
+#import "IMColorPicker.h"
+
+typedef enum{
+  IMHighlightStyleNone=0,
+  IMHighlightStyleSelected,
+  IMHighlightStyleMouseOver,
+} IMPickerHighlightStyle;
+
+@interface IMColorPicker ()
+{
+  SEL _action;
+  id _target;
+  NSInteger _selectedIndex;
+  NSInteger _mouseOverIndex;
+  NSMutableArray *_colors;
+  NSCursor *_newPickerCursor;
+  NSColorPanel *_colorPanel;
+}
+
+@end
+
+@implementation IMColorPicker
+
+- (id)initWithFrame:(NSRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+      _colors = [[NSMutableArray alloc] init];
+      _mouseOverIndex = -1;
+      _pickerSize = 24;
+      _newPickerCursor = [[NSCursor alloc] initWithImage:[NSImage imageNamed:NSImageNameAddTemplate] hotSpot:NSZeroPoint];
+    }
+    return self;
+}
+
+- (BOOL)isFlipped
+{
+  return YES;
+}
+
+- (void)viewDidMoveToSuperview
+{
+  [super viewDidMoveToSuperview];
+  NSInteger options = (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved
+                       | NSTrackingActiveInKeyWindow | NSTrackingInVisibleRect);
+  NSTrackingArea *area =
+  [[NSTrackingArea alloc] initWithRect:[self bounds]
+                               options:options
+                                 owner:self
+                              userInfo:nil];
+  [self addTrackingArea:area];
+  
+}
+
+- (void)setColors:(NSArray *)colors
+{
+  [_colors removeAllObjects];
+  [_colors addObjectsFromArray:colors];
+}
+
+- (NSArray *)colors
+{
+  return _colors;
+}
+
+#pragma mark - Drawing
+
+- (void)drawRect:(NSRect)dirtyRect
+{
+ [super drawRect:dirtyRect];
+  
+  // calculate range of pickers to draw
+  NSRect bounds = [self bounds];
+  CGFloat pickerSize = MAX(MIN(_pickerSize, NSWidth(bounds)), 24);
+  CGFloat numOfColumns = floor(NSWidth(bounds) / pickerSize);
+  CGFloat pickerWidth = NSWidth(bounds) / numOfColumns;
+  CGFloat verticalOffset = floor(dirtyRect.origin.y / pickerSize);
+  CGFloat numOfRows = ceil(NSHeight(dirtyRect) / pickerSize);
+  CGFloat numSkipedLeft = floor(NSMinX(dirtyRect) / pickerWidth);
+  CGFloat numToRight = ceil(NSMaxX(dirtyRect) / pickerWidth);
+  NSRect pickerRect = NSMakeRect(0, 0, pickerSize, pickerSize);
+  CGFloat horizontalPadding = (pickerWidth - pickerSize)/2;
+  
+  for (NSInteger row=verticalOffset; row <= verticalOffset + numOfRows; row++) {
+    for (NSInteger col=numSkipedLeft; col < numToRight; col++) {
+      NSInteger index = row * numOfColumns + col;
+      if (index > [_colors count]) return;
+      
+      pickerRect.origin.x = col * pickerWidth + horizontalPadding;
+      pickerRect.origin.y = row * pickerSize;
+      
+      IMPickerHighlightStyle style = IMHighlightStyleNone;
+      if (index>=[_colors count]) return;
+      else if (index==_selectedIndex) style = IMHighlightStyleSelected;
+      else if(index==_mouseOverIndex) style = IMHighlightStyleMouseOver;
+      
+      [self drawColorCircleWithColor:_colors[index]
+                              inRect:pickerRect
+                      highlightStyle:style];
+    }
+  }
+}
+
+- (void)drawColorCircleWithColor:(NSColor *)color inRect:(NSRect)rect highlightStyle:(IMPickerHighlightStyle)style
+{
+  rect.origin.x += 2.0;
+  rect.origin.y += 2.0;
+  rect.size.width -= 4.0;
+  rect.size.height -=4.0;
+  CGFloat width = NSWidth(rect);
+  CGFloat height = NSHeight(rect);
+  CGFloat highlightRadius = MIN(width, height)/2;
+  CGFloat colorRadius = highlightRadius * 0.6;
+  CGFloat offset = highlightRadius * 0.2;
+  
+  if (style==IMHighlightStyleMouseOver) {
+    NSBezierPath *highlightCircle =
+    [NSBezierPath bezierPathWithRoundedRect:rect xRadius:highlightRadius yRadius:highlightRadius];
+    [[NSColor controlHighlightColor] setFill];
+    [[NSColor lightGrayColor] setStroke];
+    [highlightCircle fill];
+    [highlightCircle stroke];
+  }
+  else if (style==IMHighlightStyleSelected){
+     NSBezierPath *highlightCircle =
+    [NSBezierPath bezierPathWithRoundedRect:rect xRadius:highlightRadius yRadius:highlightRadius];
+    [[NSColor whiteColor] setFill];
+    [[NSColor lightGrayColor] setStroke];
+    [highlightCircle fill];
+    [highlightCircle stroke];
+  }
+  
+  NSRect colorCircleRect =
+  NSMakeRect(rect.origin.x + offset * 2, rect.origin.y + offset * 2, colorRadius * 2, colorRadius * 2);
+  NSColor *circleStrokeColor = [self circleStrokeColorWithColor:color];
+  NSBezierPath *colorCircle =
+  [NSBezierPath bezierPathWithRoundedRect:colorCircleRect xRadius:colorRadius yRadius:colorRadius];
+  
+  [color setFill];
+  [circleStrokeColor setStroke];
+
+  [colorCircle fill];
+  [colorCircle stroke];
+}
+
+- (NSColor *)circleStrokeColorWithColor:(NSColor *)color
+{
+  if ([color isEqualTo:[NSColor controlColor]]) {
+    return [NSColor grayColor];
+  }
+  CGFloat hue, saturation, brightness, alpha;
+  color = [color colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+  [color getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+  brightness *= 0.8;
+  saturation *= 1.1;
+  return [NSColor colorWithCalibratedHue:hue saturation:saturation brightness:brightness alpha:alpha];
+}
+
+#pragma mark - Mouse tracking
+
+- (NSInteger)indexForLocation:(NSPoint)location
+{
+  NSRect bounds = [self bounds];
+  CGFloat pickerSize = MAX(MIN(_pickerSize, NSWidth(bounds)), 24);
+  NSInteger numOfColumns = floor(NSWidth(bounds) / pickerSize);
+  CGFloat pickerWidth = NSWidth(bounds) / numOfColumns;
+  NSInteger row = floor(location.y / pickerSize);
+  NSInteger left = floor(location.x / pickerWidth);
+  return row * numOfColumns + left;
+}
+
+- (NSRect)rectForIndex:(NSInteger)index
+{
+  NSRect bounds = [self bounds];
+  CGFloat pickerSize = MAX(MIN(_pickerSize, NSWidth(bounds)), 24);
+  NSInteger numOfColumns = floor(NSWidth(bounds) / pickerSize);
+  CGFloat pickerWidth = NSWidth(bounds) / numOfColumns;
+  return NSMakeRect(index%numOfColumns * pickerWidth, index/numOfColumns * pickerSize, pickerWidth, pickerSize);
+}
+
+- (void)mouseMoved:(NSEvent *)theEvent
+{
+  NSPoint location = [theEvent locationInWindow];
+  location = [self convertPoint:location fromView:nil];
+  
+  NSInteger oldIndex = _mouseOverIndex;
+  _mouseOverIndex = [self indexForLocation:location];
+  if(oldIndex!=_mouseOverIndex) {
+    [self setNeedsDisplayInRect:[self rectForIndex:oldIndex]];
+    [self setNeedsDisplayInRect:[self rectForIndex:_mouseOverIndex]];
+  }
+  
+  if ([self indexForLocation:location]>=[_colors count]) {
+    if ([NSCursor currentCursor]!=_newPickerCursor) {
+      [_newPickerCursor push];
+    }
+  }
+  else {
+    [_newPickerCursor pop];
+  }
+}
+
+
+- (void)mouseExited:(NSEvent *)theEvent
+{
+  NSPoint location = [theEvent locationInWindow];
+  location = [self convertPoint:location fromView:nil];
+  NSInteger oldIndex = _mouseOverIndex;
+  _mouseOverIndex = -1;
+  [self setNeedsDisplayInRect:[self rectForIndex:oldIndex]];
+  [_newPickerCursor pop];
+}
+
+- (void)mouseDown:(NSEvent *)theEvent
+{
+  NSPoint location = [theEvent locationInWindow];
+  location = [self convertPoint:location fromView:nil];
+  
+  NSInteger oldIndex = _selectedIndex;
+  _selectedIndex = [self indexForLocation:location];
+  if (_selectedIndex >= [_colors count]) {
+    [_colors addObject:[NSColor whiteColor]];
+    _selectedIndex = [_colors count]-1;
+    [self showColorPanel];
+  }
+  else if ([theEvent clickCount]>1) {
+    [self showColorPanel];
+  }
+  
+  [self setNeedsDisplayInRect:[self rectForIndex:oldIndex]];
+  if (_selectedIndex != oldIndex) {
+    [self setNeedsDisplayInRect:[self rectForIndex:_selectedIndex]];
+  }
+  
+}
+
+
+#pragma mark - Override action and target
+
+- (SEL)action
+{
+  return _action;
+}
+
+- (void)setAction:(SEL)aSelector
+{
+  _action = aSelector;
+}
+
+- (id)target
+{
+  return _target;
+}
+
+- (void)setTarget:(id)anObject
+{
+  _target = anObject;
+}
+
+#pragma mask - Color panel
+- (void)showColorPanel
+{
+  if (_colorPanel==nil) {
+    _colorPanel = [NSColorPanel sharedColorPanel];
+    [_colorPanel setAction:@selector(colorChanged:)];
+    [_colorPanel setTarget:self];
+  }
+  [[NSApplication sharedApplication] orderFrontColorPanel:_colorPanel];
+}
+
+- (void)colorChanged:(id)sender
+{
+  if (_selectedIndex>=0) {
+    [_colors setObject:_colorPanel.color atIndexedSubscript:_selectedIndex];
+    [self setNeedsDisplayInRect:[self rectForIndex:_selectedIndex]];
+  }
+}
+
+#pragma mask - properties
+
+- (NSColor *)color
+{
+  if(_selectedIndex>=0 && _selectedIndex<[_colors count]){
+    return [_colors objectAtIndex:_selectedIndex];
+  }
+  return nil;
+}
+
+- (NSColor *)mouseOverColor
+{
+  if (_mouseOverIndex>=0 && _mouseOverIndex<[_colors count]) {
+    return [_colors objectAtIndex:_mouseOverIndex];
+  }
+  return nil;
+}
+
+@end

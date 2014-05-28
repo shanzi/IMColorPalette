@@ -18,6 +18,7 @@
 		52C8F54619359CA6002E7BC5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C8F52519359CA6002E7BC5 /* Cocoa.framework */; };
 		52C8F54E19359CA6002E7BC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C8F54C19359CA6002E7BC5 /* InfoPlist.strings */; };
 		52C8F55019359CA6002E7BC5 /* IMColorPickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8F54F19359CA6002E7BC5 /* IMColorPickerDemoTests.m */; };
+		52C8F55C1935A0D8002E7BC5 /* IMColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8F55B1935A0D8002E7BC5 /* IMColorPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		52C8F54B19359CA6002E7BC5 /* IMColorPickerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IMColorPickerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		52C8F54D19359CA6002E7BC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		52C8F54F19359CA6002E7BC5 /* IMColorPickerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMColorPickerDemoTests.m; sourceTree = "<group>"; };
+		52C8F55A1935A0D8002E7BC5 /* IMColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMColorPicker.h; path = ../src/IMColorPicker.h; sourceTree = "<group>"; };
+		52C8F55B1935A0D8002E7BC5 /* IMColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMColorPicker.m; path = ../src/IMColorPicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 		52C8F55919359FD0002E7BC5 /* IMColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				52C8F55A1935A0D8002E7BC5 /* IMColorPicker.h */,
+				52C8F55B1935A0D8002E7BC5 /* IMColorPicker.m */,
 			);
 			name = IMColorPicker;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C8F55C1935A0D8002E7BC5 /* IMColorPicker.m in Sources */,
 				52C8F53919359CA6002E7BC5 /* IMAppDelegate.m in Sources */,
 				52C8F53219359CA6002E7BC5 /* main.m in Sources */,
 			);
@@ -475,6 +481,7 @@
 				52C8F55519359CA6002E7BC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52C8F55619359CA6002E7BC5 /* Build configuration list for PBXNativeTarget "IMColorPickerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				52C8F55819359CA6002E7BC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
