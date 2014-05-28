@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52C8F52619359CA6002E7BC5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C8F52519359CA6002E7BC5 /* Cocoa.framework */; };
+		52C8F53019359CA6002E7BC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C8F52E19359CA6002E7BC5 /* InfoPlist.strings */; };
+		52C8F53219359CA6002E7BC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8F53119359CA6002E7BC5 /* main.m */; };
+		52C8F53619359CA6002E7BC5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 52C8F53419359CA6002E7BC5 /* Credits.rtf */; };
+		52C8F53919359CA6002E7BC5 /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8F53819359CA6002E7BC5 /* IMAppDelegate.m */; };
+		52C8F53C19359CA6002E7BC5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C8F53A19359CA6002E7BC5 /* MainMenu.xib */; };
+		52C8F53E19359CA6002E7BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C8F53D19359CA6002E7BC5 /* Images.xcassets */; };
+		52C8F54519359CA6002E7BC5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C8F54419359CA6002E7BC5 /* XCTest.framework */; };
+		52C8F54619359CA6002E7BC5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C8F52519359CA6002E7BC5 /* Cocoa.framework */; };
+		52C8F54E19359CA6002E7BC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C8F54C19359CA6002E7BC5 /* InfoPlist.strings */; };
+		52C8F55019359CA6002E7BC5 /* IMColorPickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8F54F19359CA6002E7BC5 /* IMColorPickerDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52C8F54719359CA6002E7BC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52C8F51A19359CA6002E7BC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52C8F52119359CA6002E7BC5;
+			remoteInfo = IMColorPickerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52C8F52219359CA6002E7BC5 /* IMColorPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMColorPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C8F52519359CA6002E7BC5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		52C8F52819359CA6002E7BC5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		52C8F52919359CA6002E7BC5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		52C8F52A19359CA6002E7BC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		52C8F52D19359CA6002E7BC5 /* IMColorPickerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IMColorPickerDemo-Info.plist"; sourceTree = "<group>"; };
+		52C8F52F19359CA6002E7BC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52C8F53119359CA6002E7BC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52C8F53319359CA6002E7BC5 /* IMColorPickerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IMColorPickerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		52C8F53519359CA6002E7BC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		52C8F53719359CA6002E7BC5 /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
+		52C8F53819359CA6002E7BC5 /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
+		52C8F53B19359CA6002E7BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		52C8F53D19359CA6002E7BC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		52C8F54319359CA6002E7BC5 /* IMColorPickerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMColorPickerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C8F54419359CA6002E7BC5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		52C8F54B19359CA6002E7BC5 /* IMColorPickerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IMColorPickerDemoTests-Info.plist"; sourceTree = "<group>"; };
+		52C8F54D19359CA6002E7BC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52C8F54F19359CA6002E7BC5 /* IMColorPickerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMColorPickerDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52C8F51F19359CA6002E7BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C8F52619359CA6002E7BC5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C8F54019359CA6002E7BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C8F54619359CA6002E7BC5 /* Cocoa.framework in Frameworks */,
+				52C8F54519359CA6002E7BC5 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52C8F51919359CA6002E7BC5 = {
+			isa = PBXGroup;
+			children = (
+				52C8F55919359FD0002E7BC5 /* IMColorPicker */,
+				52C8F52B19359CA6002E7BC5 /* IMColorPickerDemo */,
+				52C8F54919359CA6002E7BC5 /* IMColorPickerDemoTests */,
+				52C8F52419359CA6002E7BC5 /* Frameworks */,
+				52C8F52319359CA6002E7BC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52C8F52319359CA6002E7BC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52C8F52219359CA6002E7BC5 /* IMColorPickerDemo.app */,
+				52C8F54319359CA6002E7BC5 /* IMColorPickerDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52C8F52419359CA6002E7BC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52C8F52519359CA6002E7BC5 /* Cocoa.framework */,
+				52C8F54419359CA6002E7BC5 /* XCTest.framework */,
+				52C8F52719359CA6002E7BC5 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52C8F52719359CA6002E7BC5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52C8F52819359CA6002E7BC5 /* AppKit.framework */,
+				52C8F52919359CA6002E7BC5 /* CoreData.framework */,
+				52C8F52A19359CA6002E7BC5 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		52C8F52B19359CA6002E7BC5 /* IMColorPickerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				52C8F53719359CA6002E7BC5 /* IMAppDelegate.h */,
+				52C8F53819359CA6002E7BC5 /* IMAppDelegate.m */,
+				52C8F53A19359CA6002E7BC5 /* MainMenu.xib */,
+				52C8F53D19359CA6002E7BC5 /* Images.xcassets */,
+				52C8F52C19359CA6002E7BC5 /* Supporting Files */,
+			);
+			path = IMColorPickerDemo;
+			sourceTree = "<group>";
+		};
+		52C8F52C19359CA6002E7BC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52C8F52D19359CA6002E7BC5 /* IMColorPickerDemo-Info.plist */,
+				52C8F52E19359CA6002E7BC5 /* InfoPlist.strings */,
+				52C8F53119359CA6002E7BC5 /* main.m */,
+				52C8F53319359CA6002E7BC5 /* IMColorPickerDemo-Prefix.pch */,
+				52C8F53419359CA6002E7BC5 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52C8F54919359CA6002E7BC5 /* IMColorPickerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				52C8F54F19359CA6002E7BC5 /* IMColorPickerDemoTests.m */,
+				52C8F54A19359CA6002E7BC5 /* Supporting Files */,
+			);
+			path = IMColorPickerDemoTests;
+			sourceTree = "<group>";
+		};
+		52C8F54A19359CA6002E7BC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52C8F54B19359CA6002E7BC5 /* IMColorPickerDemoTests-Info.plist */,
+				52C8F54C19359CA6002E7BC5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52C8F55919359FD0002E7BC5 /* IMColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = IMColorPicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52C8F52119359CA6002E7BC5 /* IMColorPickerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C8F55319359CA6002E7BC5 /* Build configuration list for PBXNativeTarget "IMColorPickerDemo" */;
+			buildPhases = (
+				52C8F51E19359CA6002E7BC5 /* Sources */,
+				52C8F51F19359CA6002E7BC5 /* Frameworks */,
+				52C8F52019359CA6002E7BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMColorPickerDemo;
+			productName = IMColorPickerDemo;
+			productReference = 52C8F52219359CA6002E7BC5 /* IMColorPickerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52C8F54219359CA6002E7BC5 /* IMColorPickerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C8F55619359CA6002E7BC5 /* Build configuration list for PBXNativeTarget "IMColorPickerDemoTests" */;
+			buildPhases = (
+				52C8F53F19359CA6002E7BC5 /* Sources */,
+				52C8F54019359CA6002E7BC5 /* Frameworks */,
+				52C8F54119359CA6002E7BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52C8F54819359CA6002E7BC5 /* PBXTargetDependency */,
+			);
+			name = IMColorPickerDemoTests;
+			productName = IMColorPickerDemoTests;
+			productReference = 52C8F54319359CA6002E7BC5 /* IMColorPickerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52C8F51A19359CA6002E7BC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "io-meter";
+				TargetAttributes = {
+					52C8F54219359CA6002E7BC5 = {
+						TestTargetID = 52C8F52119359CA6002E7BC5;
+					};
+				};
+			};
+			buildConfigurationList = 52C8F51D19359CA6002E7BC5 /* Build configuration list for PBXProject "IMColorPickerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52C8F51919359CA6002E7BC5;
+			productRefGroup = 52C8F52319359CA6002E7BC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52C8F52119359CA6002E7BC5 /* IMColorPickerDemo */,
+				52C8F54219359CA6002E7BC5 /* IMColorPickerDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52C8F52019359CA6002E7BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C8F53019359CA6002E7BC5 /* InfoPlist.strings in Resources */,
+				52C8F53E19359CA6002E7BC5 /* Images.xcassets in Resources */,
+				52C8F53619359CA6002E7BC5 /* Credits.rtf in Resources */,
+				52C8F53C19359CA6002E7BC5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C8F54119359CA6002E7BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C8F54E19359CA6002E7BC5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52C8F51E19359CA6002E7BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C8F53919359CA6002E7BC5 /* IMAppDelegate.m in Sources */,
+				52C8F53219359CA6002E7BC5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52C8F53F19359CA6002E7BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C8F55019359CA6002E7BC5 /* IMColorPickerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52C8F54819359CA6002E7BC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52C8F52119359CA6002E7BC5 /* IMColorPickerDemo */;
+			targetProxy = 52C8F54719359CA6002E7BC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52C8F52E19359CA6002E7BC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52C8F52F19359CA6002E7BC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		52C8F53419359CA6002E7BC5 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52C8F53519359CA6002E7BC5 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		52C8F53A19359CA6002E7BC5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52C8F53B19359CA6002E7BC5 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		52C8F54C19359CA6002E7BC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52C8F54D19359CA6002E7BC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52C8F55119359CA6002E7BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52C8F55219359CA6002E7BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52C8F55419359CA6002E7BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPickerDemo/IMColorPickerDemo-Prefix.pch";
+				INFOPLIST_FILE = "IMColorPickerDemo/IMColorPickerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		52C8F55519359CA6002E7BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPickerDemo/IMColorPickerDemo-Prefix.pch";
+				INFOPLIST_FILE = "IMColorPickerDemo/IMColorPickerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		52C8F55719359CA6002E7BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IMColorPickerDemo.app/Contents/MacOS/IMColorPickerDemo";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPickerDemo/IMColorPickerDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IMColorPickerDemoTests/IMColorPickerDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		52C8F55819359CA6002E7BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IMColorPickerDemo.app/Contents/MacOS/IMColorPickerDemo";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPickerDemo/IMColorPickerDemo-Prefix.pch";
+				INFOPLIST_FILE = "IMColorPickerDemoTests/IMColorPickerDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52C8F51D19359CA6002E7BC5 /* Build configuration list for PBXProject "IMColorPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C8F55119359CA6002E7BC5 /* Debug */,
+				52C8F55219359CA6002E7BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52C8F55319359CA6002E7BC5 /* Build configuration list for PBXNativeTarget "IMColorPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C8F55419359CA6002E7BC5 /* Debug */,
+				52C8F55519359CA6002E7BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52C8F55619359CA6002E7BC5 /* Build configuration list for PBXNativeTarget "IMColorPickerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C8F55719359CA6002E7BC5 /* Debug */,
+				52C8F55819359CA6002E7BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52C8F51A19359CA6002E7BC5 /* Project object */;
+}
