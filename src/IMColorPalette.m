@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 io-meter. All rights reserved.
 //
 
-#import "IMColorPicker.h"
+#import "IMColorPalette.h"
 
 typedef enum{
   IMHighlightStyleNone=0,
@@ -14,7 +14,7 @@ typedef enum{
   IMHighlightStyleMouseOver,
 } IMPickerHighlightStyle;
 
-@interface IMColorPicker ()
+@interface IMColorPalette ()
 {
   SEL _action;
   id _target;
@@ -26,7 +26,7 @@ typedef enum{
 
 @end
 
-@implementation IMColorPicker
+@implementation IMColorPalette
 
 - (id)initWithFrame:(NSRect)frame
 {

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface IMColorPicker : NSControl
+@interface IMColorPalette : NSControl
 
 @property(nonatomic, readonly) NSColor *color;
 @property(nonatomic, readonly) NSColor *mouseOverColor;

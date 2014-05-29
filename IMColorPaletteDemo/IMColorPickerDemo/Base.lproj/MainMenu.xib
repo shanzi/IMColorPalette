@@ -675,7 +675,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="274" height="227"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="cZh-qy-0Yb" customClass="IMColorPicker">
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="cZh-qy-0Yb" customClass="IMColorPalette">
                         <rect key="frame" x="0.0" y="0.0" width="274" height="227"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
