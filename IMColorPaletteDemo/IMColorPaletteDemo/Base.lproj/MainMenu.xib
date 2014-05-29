@@ -13,17 +13,18 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="IMAppDelegate">
             <connections>
+                <outlet property="colorPalette" destination="1ra-kB-Oan" id="2vp-zD-TkN"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="IMColorPickerDemo" id="1Xt-HY-uBw">
+                <menuItem title="IMColorPaletteDemo" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="IMColorPickerDemo" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="IMColorPaletteDemo" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About IMColorPickerDemo" id="5kV-Vb-QxS">
+                            <menuItem title="About IMColorPaletteDemo" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -37,7 +38,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide IMColorPickerDemo" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide IMColorPaletteDemo" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -55,7 +56,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit IMColorPickerDemo" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit IMColorPaletteDemo" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -166,7 +167,7 @@
                             <menuItem title="Delete" id="pa3-QI-u2k">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="delete:" target="-1" id="aBz-ah-S02"/>
+                                    <action selector="delete:" target="-1" id="0Mk-Ml-PaM"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Select All" keyEquivalent="a" id="Ruw-6m-B2m">
@@ -656,7 +657,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="IMColorPickerDemo Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="IMColorPaletteDemo Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -666,25 +667,25 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="IMColorPickerDemo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="IMColorPaletteDemo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="274" height="227"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <rect key="contentRect" x="335" y="390" width="218" height="210"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="274" height="227"/>
+                <rect key="frame" x="0.0" y="0.0" width="218" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="cZh-qy-0Yb" customClass="IMColorPalette">
-                        <rect key="frame" x="0.0" y="0.0" width="274" height="227"/>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="1ra-kB-Oan" customClass="IMColorPalette">
+                        <rect key="frame" x="0.0" y="0.0" width="218" height="210"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="cZh-qy-0Yb" secondAttribute="trailing" id="2kC-CR-56g"/>
-                    <constraint firstItem="cZh-qy-0Yb" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="H6p-y4-TbU"/>
-                    <constraint firstAttribute="bottom" secondItem="cZh-qy-0Yb" secondAttribute="bottom" id="J1t-yo-5Ns"/>
-                    <constraint firstItem="cZh-qy-0Yb" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="aRb-Po-U43"/>
+                    <constraint firstItem="1ra-kB-Oan" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="Swl-3D-t58"/>
+                    <constraint firstAttribute="trailing" secondItem="1ra-kB-Oan" secondAttribute="trailing" id="V95-8B-RSu"/>
+                    <constraint firstItem="1ra-kB-Oan" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="iju-0w-XEe"/>
+                    <constraint firstAttribute="bottom" secondItem="1ra-kB-Oan" secondAttribute="bottom" id="mQC-hs-sWh"/>
                 </constraints>
             </view>
         </window>

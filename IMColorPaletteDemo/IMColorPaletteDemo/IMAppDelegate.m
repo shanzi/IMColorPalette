@@ -1,12 +1,13 @@
 //
 //  IMAppDelegate.m
-//  IMColorPickerDemo
+//  IMColorPaletteDemo
 //
-//  Created by Chase Zhang on 5/28/14.
+//  Created by Chase Zhang on 5/29/14.
 //  Copyright (c) 2014 io-meter. All rights reserved.
 //
 
 #import "IMAppDelegate.h"
+#import "IMColorPalette.h"
 
 @implementation IMAppDelegate
 
@@ -14,6 +15,7 @@
 {
   // Insert code here to initialize your application
   [self.window setAcceptsMouseMovedEvents:YES];
+  [self.colorPalette applyDefaultColors];
 }
 
 @end

@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52FE013619371DBC00093809 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FE013519371DBC00093809 /* Cocoa.framework */; };
+		52FE014019371DBC00093809 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52FE013E19371DBC00093809 /* InfoPlist.strings */; };
+		52FE014219371DBC00093809 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FE014119371DBC00093809 /* main.m */; };
+		52FE014619371DBC00093809 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 52FE014419371DBC00093809 /* Credits.rtf */; };
+		52FE014919371DBC00093809 /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FE014819371DBC00093809 /* IMAppDelegate.m */; };
+		52FE014C19371DBC00093809 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FE014A19371DBC00093809 /* MainMenu.xib */; };
+		52FE014E19371DBC00093809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FE014D19371DBC00093809 /* Images.xcassets */; };
+		52FE015519371DBC00093809 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FE015419371DBC00093809 /* XCTest.framework */; };
+		52FE015619371DBC00093809 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FE013519371DBC00093809 /* Cocoa.framework */; };
+		52FE015E19371DBC00093809 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52FE015C19371DBC00093809 /* InfoPlist.strings */; };
+		52FE016019371DBC00093809 /* IMColorPaletteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FE015F19371DBC00093809 /* IMColorPaletteDemoTests.m */; };
+		52FE016C19371DD300093809 /* IMColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FE016B19371DD300093809 /* IMColorPalette.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52FE015719371DBC00093809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FE012A19371DBC00093809 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52FE013119371DBC00093809;
+			remoteInfo = IMColorPaletteDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52FE013219371DBC00093809 /* IMColorPaletteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMColorPaletteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FE013519371DBC00093809 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		52FE013819371DBC00093809 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		52FE013919371DBC00093809 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		52FE013A19371DBC00093809 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		52FE013D19371DBC00093809 /* IMColorPaletteDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IMColorPaletteDemo-Info.plist"; sourceTree = "<group>"; };
+		52FE013F19371DBC00093809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52FE014119371DBC00093809 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52FE014319371DBC00093809 /* IMColorPaletteDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IMColorPaletteDemo-Prefix.pch"; sourceTree = "<group>"; };
+		52FE014519371DBC00093809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		52FE014719371DBC00093809 /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
+		52FE014819371DBC00093809 /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
+		52FE014B19371DBC00093809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		52FE014D19371DBC00093809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		52FE015319371DBC00093809 /* IMColorPaletteDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMColorPaletteDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FE015419371DBC00093809 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		52FE015B19371DBC00093809 /* IMColorPaletteDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IMColorPaletteDemoTests-Info.plist"; sourceTree = "<group>"; };
+		52FE015D19371DBC00093809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52FE015F19371DBC00093809 /* IMColorPaletteDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMColorPaletteDemoTests.m; sourceTree = "<group>"; };
+		52FE016A19371DD300093809 /* IMColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColorPalette.h; sourceTree = "<group>"; };
+		52FE016B19371DD300093809 /* IMColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColorPalette.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52FE012F19371DBC00093809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FE013619371DBC00093809 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FE015019371DBC00093809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FE015619371DBC00093809 /* Cocoa.framework in Frameworks */,
+				52FE015519371DBC00093809 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52FE012919371DBC00093809 = {
+			isa = PBXGroup;
+			children = (
+				52FE016919371DD300093809 /* IMColorPalette */,
+				52FE013B19371DBC00093809 /* IMColorPaletteDemo */,
+				52FE015919371DBC00093809 /* IMColorPaletteDemoTests */,
+				52FE013419371DBC00093809 /* Frameworks */,
+				52FE013319371DBC00093809 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52FE013319371DBC00093809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52FE013219371DBC00093809 /* IMColorPaletteDemo.app */,
+				52FE015319371DBC00093809 /* IMColorPaletteDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52FE013419371DBC00093809 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52FE013519371DBC00093809 /* Cocoa.framework */,
+				52FE015419371DBC00093809 /* XCTest.framework */,
+				52FE013719371DBC00093809 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52FE013719371DBC00093809 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52FE013819371DBC00093809 /* AppKit.framework */,
+				52FE013919371DBC00093809 /* CoreData.framework */,
+				52FE013A19371DBC00093809 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		52FE013B19371DBC00093809 /* IMColorPaletteDemo */ = {
+			isa = PBXGroup;
+			children = (
+				52FE014719371DBC00093809 /* IMAppDelegate.h */,
+				52FE014819371DBC00093809 /* IMAppDelegate.m */,
+				52FE014A19371DBC00093809 /* MainMenu.xib */,
+				52FE014D19371DBC00093809 /* Images.xcassets */,
+				52FE013C19371DBC00093809 /* Supporting Files */,
+			);
+			path = IMColorPaletteDemo;
+			sourceTree = "<group>";
+		};
+		52FE013C19371DBC00093809 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52FE013D19371DBC00093809 /* IMColorPaletteDemo-Info.plist */,
+				52FE013E19371DBC00093809 /* InfoPlist.strings */,
+				52FE014119371DBC00093809 /* main.m */,
+				52FE014319371DBC00093809 /* IMColorPaletteDemo-Prefix.pch */,
+				52FE014419371DBC00093809 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52FE015919371DBC00093809 /* IMColorPaletteDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				52FE015F19371DBC00093809 /* IMColorPaletteDemoTests.m */,
+				52FE015A19371DBC00093809 /* Supporting Files */,
+			);
+			path = IMColorPaletteDemoTests;
+			sourceTree = "<group>";
+		};
+		52FE015A19371DBC00093809 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52FE015B19371DBC00093809 /* IMColorPaletteDemoTests-Info.plist */,
+				52FE015C19371DBC00093809 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52FE016919371DD300093809 /* IMColorPalette */ = {
+			isa = PBXGroup;
+			children = (
+				52FE016A19371DD300093809 /* IMColorPalette.h */,
+				52FE016B19371DD300093809 /* IMColorPalette.m */,
+			);
+			name = IMColorPalette;
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52FE013119371DBC00093809 /* IMColorPaletteDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FE016319371DBC00093809 /* Build configuration list for PBXNativeTarget "IMColorPaletteDemo" */;
+			buildPhases = (
+				52FE012E19371DBC00093809 /* Sources */,
+				52FE012F19371DBC00093809 /* Frameworks */,
+				52FE013019371DBC00093809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMColorPaletteDemo;
+			productName = IMColorPaletteDemo;
+			productReference = 52FE013219371DBC00093809 /* IMColorPaletteDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52FE015219371DBC00093809 /* IMColorPaletteDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FE016619371DBC00093809 /* Build configuration list for PBXNativeTarget "IMColorPaletteDemoTests" */;
+			buildPhases = (
+				52FE014F19371DBC00093809 /* Sources */,
+				52FE015019371DBC00093809 /* Frameworks */,
+				52FE015119371DBC00093809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52FE015819371DBC00093809 /* PBXTargetDependency */,
+			);
+			name = IMColorPaletteDemoTests;
+			productName = IMColorPaletteDemoTests;
+			productReference = 52FE015319371DBC00093809 /* IMColorPaletteDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52FE012A19371DBC00093809 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "io-meter";
+				TargetAttributes = {
+					52FE015219371DBC00093809 = {
+						TestTargetID = 52FE013119371DBC00093809;
+					};
+				};
+			};
+			buildConfigurationList = 52FE012D19371DBC00093809 /* Build configuration list for PBXProject "IMColorPaletteDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52FE012919371DBC00093809;
+			productRefGroup = 52FE013319371DBC00093809 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52FE013119371DBC00093809 /* IMColorPaletteDemo */,
+				52FE015219371DBC00093809 /* IMColorPaletteDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52FE013019371DBC00093809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FE014019371DBC00093809 /* InfoPlist.strings in Resources */,
+				52FE014E19371DBC00093809 /* Images.xcassets in Resources */,
+				52FE014619371DBC00093809 /* Credits.rtf in Resources */,
+				52FE014C19371DBC00093809 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FE015119371DBC00093809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FE015E19371DBC00093809 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52FE012E19371DBC00093809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FE016C19371DD300093809 /* IMColorPalette.m in Sources */,
+				52FE014919371DBC00093809 /* IMAppDelegate.m in Sources */,
+				52FE014219371DBC00093809 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FE014F19371DBC00093809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FE016019371DBC00093809 /* IMColorPaletteDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52FE015819371DBC00093809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52FE013119371DBC00093809 /* IMColorPaletteDemo */;
+			targetProxy = 52FE015719371DBC00093809 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52FE013E19371DBC00093809 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52FE013F19371DBC00093809 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		52FE014419371DBC00093809 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52FE014519371DBC00093809 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		52FE014A19371DBC00093809 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52FE014B19371DBC00093809 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		52FE015C19371DBC00093809 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52FE015D19371DBC00093809 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52FE016119371DBC00093809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52FE016219371DBC00093809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52FE016419371DBC00093809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPaletteDemo/IMColorPaletteDemo-Prefix.pch";
+				INFOPLIST_FILE = "IMColorPaletteDemo/IMColorPaletteDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		52FE016519371DBC00093809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPaletteDemo/IMColorPaletteDemo-Prefix.pch";
+				INFOPLIST_FILE = "IMColorPaletteDemo/IMColorPaletteDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		52FE016719371DBC00093809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IMColorPaletteDemo.app/Contents/MacOS/IMColorPaletteDemo";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPaletteDemo/IMColorPaletteDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IMColorPaletteDemoTests/IMColorPaletteDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		52FE016819371DBC00093809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IMColorPaletteDemo.app/Contents/MacOS/IMColorPaletteDemo";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IMColorPaletteDemo/IMColorPaletteDemo-Prefix.pch";
+				INFOPLIST_FILE = "IMColorPaletteDemoTests/IMColorPaletteDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52FE012D19371DBC00093809 /* Build configuration list for PBXProject "IMColorPaletteDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FE016119371DBC00093809 /* Debug */,
+				52FE016219371DBC00093809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FE016319371DBC00093809 /* Build configuration list for PBXNativeTarget "IMColorPaletteDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FE016419371DBC00093809 /* Debug */,
+				52FE016519371DBC00093809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52FE016619371DBC00093809 /* Build configuration list for PBXNativeTarget "IMColorPaletteDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FE016719371DBC00093809 /* Debug */,
+				52FE016819371DBC00093809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52FE012A19371DBC00093809 /* Project object */;
+}

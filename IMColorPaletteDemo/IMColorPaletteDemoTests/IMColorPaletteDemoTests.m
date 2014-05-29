@@ -1,18 +1,18 @@
 //
-//  IMColorPickerDemoTests.m
-//  IMColorPickerDemoTests
+//  IMColorPaletteDemoTests.m
+//  IMColorPaletteDemoTests
 //
-//  Created by Chase Zhang on 5/28/14.
+//  Created by Chase Zhang on 5/29/14.
 //  Copyright (c) 2014 io-meter. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface IMColorPickerDemoTests : XCTestCase
+@interface IMColorPaletteDemoTests : XCTestCase
 
 @end
 
-@implementation IMColorPickerDemoTests
+@implementation IMColorPaletteDemoTests
 
 - (void)setUp
 {
